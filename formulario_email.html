@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Contato</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #e0e0e0, #f5f5f5);
+      padding: 40px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Entre em Contato</h2>
+
+  <form action="https://formsubmit.co/seuemail@dominio.com" method="POST">
+    <!-- Substitua com seu e-mail acima -->
+
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+    <!-- Anti-spam -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Redirecionamento após envio -->
+    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
